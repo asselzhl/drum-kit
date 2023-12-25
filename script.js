@@ -13,6 +13,7 @@ document.addEventListener('keydown', (event)=> {
     }
     for (let sound of sounds) {
         if (key === sound.getAttribute('data-key')) {
+            sound.currentTime = 0;
             sound.play();
         }
     }
@@ -23,4 +24,3 @@ window.addEventListener('keyup', () => {
         button.classList.remove('playing');
     } 
 });
-
